@@ -1,5 +1,6 @@
 import React from 'react'
 import {useStyle} from './hooks'
+import withContext from './withContext'
 
 interface BBLUProps {
     w : number, 
@@ -20,4 +21,4 @@ const ButtonBiLineUp = (props : BBLUProps) => {
     )
 }
 
-export default ButtonBiLineUp 
+export default withContext(ButtonBiLineUp)
