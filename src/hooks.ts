@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import {CSSProperties, useEffect, useState} from 'react'
 
 const scGap : number = 0.01 
 const delay : number = 20 
@@ -57,7 +57,7 @@ export const useStyle = (w : number, h : number, scale : number) => {
     const size : number = Math.min(w, h) / 10 
     const background = 'indigo'
     return {
-        parentStyle() {
+        parentStyle() : CSSProperties {
             const left = `${w / 2}px`
             const top = `${h / 2 - (h / 2 - size / 2) * sc2}px`
             return {
@@ -66,7 +66,7 @@ export const useStyle = (w : number, h : number, scale : number) => {
                 position 
             }
         },
-        lineStyle(i : number) {
+        lineStyle(i : number) : CSSProperties {
             const left = `${-size / 2 + size * i}px`
             const top = `${size / 2}px`
             const width = `${Math.min(w, h) / 90}px`
@@ -80,7 +80,7 @@ export const useStyle = (w : number, h : number, scale : number) => {
                 background 
             }
         },
-        squareStyle() {
+        squareStyle() : CSSProperties {
             const left = `${-size / 2}px`
             const top = `${-size / 8}px`
             const width = `${size}px`
