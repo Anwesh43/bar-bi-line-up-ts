@@ -14,7 +14,7 @@ const ButtonBiLineUp = (props : BBLUProps) => {
         <React.Fragment>
             <div style = {parentStyle()}>
                 {[0, 1].map((i : number) => (<div style = {lineStyle(i)}></div>))}
-                <div style = {squareStyle()}></div>
+                <div style = {squareStyle()} onClick = {() => onClick()}></div>
             </div>
         </React.Fragment>
     )
